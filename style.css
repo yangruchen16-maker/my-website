@@ -1,14 +1,14 @@
 body {
-  background-color: #f5f5f5;
+  background-color: #FFF7FB;
   font-family: "Helvetica Neue", Arial, "微軟正黑體", sans-serif;
   padding: 40px;
 }
 h1{
-    color:blue;
+    color:#003E3E;
     font-size:60px;
 }
 h2{
-    color:green;
+    color:#009393;
 }
 p{
     color:gray;
