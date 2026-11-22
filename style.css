@@ -375,7 +375,7 @@ footer{border-top:1px solid var(--line);margin-top:20px}.footer-inner{width:min(
   color:#2f625e!important;
 }
 /* disable old nested flyout behavior */
-.nav-submenu,.level-two,.level-three{display:none!important}
+.nav-submenu{display:block!important}.level-two,.level-three{display:none}
 @media(max-width:850px){
   .nav-dropdown .dropdown-menu{
     position:static;
@@ -505,3 +505,9 @@ footer{border-top:1px solid var(--line);margin-top:20px}.footer-inner{width:min(
   .level-one,.level-two{position:static!important;margin:4px 0 4px 10px!important;padding:4px 5px 4px 9px!important;box-shadow:none!important;border-left:2px solid #cfe7e3!important;border-radius:0 10px 10px 0!important}
   .nav-submenu::after{display:none}
 }
+/* ===== Fix natural submenu visibility ===== */
+.nav-dropdown .nav-submenu{display:block!important;position:relative}
+.nav-dropdown .nav-submenu>.submenu-trigger{display:flex!important}
+.nav-dropdown .nav-submenu>.level-two{display:none!important}
+.nav-dropdown .nav-submenu:hover>.level-two,
+.nav-dropdown .nav-submenu:focus-within>.level-two{display:block!important}
