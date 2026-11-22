@@ -486,3 +486,22 @@ footer{border-top:1px solid var(--line);margin-top:20px}.footer-inner{width:min(
 .dropdown-parent-link{font-weight:800!important;color:#356b66!important}
 .dropdown-children{padding-left:14px}
 .dropdown-children a{font-size:.9rem!important;color:#68827f!important;padding-top:7px!important;padding-bottom:7px!important}
+
+/* ===== Natural hover submenu + unified subject colors ===== */
+.nav-dropdown,.nav-submenu{position:relative}
+.level-one{position:absolute!important;top:100%!important;left:0!important;display:none}
+.level-two{position:absolute!important;top:-7px!important;left:100%!important;display:none;margin-left:0!important;padding-left:10px!important}
+.nav-dropdown:hover>.level-one,.nav-dropdown:focus-within>.level-one{display:block}
+.nav-submenu:hover>.level-two,.nav-submenu:focus-within>.level-two{display:block}
+.nav-submenu::after{content:"";position:absolute;top:-8px;right:-14px;width:18px;height:calc(100% + 16px)}
+.hub-card.math,.hub-card.language,.hub-card.science{
+  background:#e4f3ef!important;color:#315f5b!important;border:1px solid #cfe6e1!important;
+  box-shadow:0 10px 28px rgba(70,135,130,.06)!important
+}
+.hub-card.math small,.hub-card.language small,.hub-card.science small,
+.hub-card.math p,.hub-card.language p,.hub-card.science p{color:#587875!important}
+.hub-card.math h2,.hub-card.language h2,.hub-card.science h2{color:#356b66!important}
+@media(max-width:850px){
+  .level-one,.level-two{position:static!important;margin:4px 0 4px 10px!important;padding:4px 5px 4px 9px!important;box-shadow:none!important;border-left:2px solid #cfe7e3!important;border-radius:0 10px 10px 0!important}
+  .nav-submenu::after{display:none}
+}
