@@ -654,3 +654,5 @@ footer{border-top:1px solid var(--line);margin-top:20px}.footer-inner{width:min(
   .qa-card{grid-template-columns:1fr;gap:10px}
   .qa-number{width:44px;height:44px}
 }
+
+.qa-question{background:#eef7f4;border-left:3px solid #86bdb6;padding:14px 16px;border-radius:0 12px 12px 0;color:#4f6865!important}
