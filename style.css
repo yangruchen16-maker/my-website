@@ -511,3 +511,25 @@ footer{border-top:1px solid var(--line);margin-top:20px}.footer-inner{width:min(
 .nav-dropdown .nav-submenu>.level-two{display:none!important}
 .nav-dropdown .nav-submenu:hover>.level-two,
 .nav-dropdown .nav-submenu:focus-within>.level-two{display:block!important}
+
+/* ===== Keep Natural submenu inside viewport ===== */
+.nav-dropdown .nav-submenu>.level-two{
+  left:auto!important;
+  right:100%!important;
+  margin-left:0!important;
+  margin-right:0!important;
+  padding-left:0!important;
+  padding-right:10px!important;
+}
+.nav-dropdown .nav-submenu::after{
+  right:auto!important;
+  left:-16px!important;
+  width:20px!important;
+}
+@media(max-width:850px){
+  .nav-dropdown .nav-submenu>.level-two{
+    right:auto!important;
+    left:auto!important;
+    padding-right:4px!important;
+  }
+}
