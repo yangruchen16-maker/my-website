@@ -533,3 +533,94 @@ footer{border-top:1px solid var(--line);margin-top:20px}.footer-inner{width:min(
     padding-right:4px!important;
   }
 }
+
+/* ===== Mobile navigation reset ===== */
+@media(max-width:850px){
+  .site-header{position:sticky;top:0;z-index:200}
+  .navbar{
+    width:min(100% - 24px,1120px)!important;
+    min-height:auto!important;
+    padding:12px 0 14px!important;
+    display:block!important;
+  }
+  .brand{
+    display:block!important;
+    margin:0 0 10px!important;
+    font-size:1rem!important;
+    line-height:1.2!important;
+  }
+  .nav-links{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:4px!important;
+    width:100%!important;
+  }
+  .nav-links>a,
+  .nav-trigger,
+  .submenu-trigger{
+    display:flex!important;
+    width:100%!important;
+    justify-content:space-between!important;
+    align-items:center!important;
+    padding:10px 12px!important;
+    border-radius:10px!important;
+    font-size:.95rem!important;
+    line-height:1.25!important;
+  }
+  .nav-dropdown,
+  .nav-submenu{
+    display:block!important;
+    width:100%!important;
+    position:relative!important;
+  }
+  .nav-dropdown>.dropdown-menu{
+    position:static!important;
+    display:none!important;
+    width:100%!important;
+    min-width:0!important;
+    margin:4px 0 0!important;
+    padding:6px!important;
+    border:1px solid #d7e8e4!important;
+    border-radius:12px!important;
+    box-shadow:none!important;
+    background:#f8fbfa!important;
+  }
+  .nav-dropdown.menu-open>.dropdown-menu{
+    display:block!important;
+  }
+  .nav-submenu>.level-two{
+    position:static!important;
+    display:none!important;
+    width:100%!important;
+    min-width:0!important;
+    margin:4px 0 0!important;
+    padding:4px 0 0 12px!important;
+    border:0!important;
+    border-left:2px solid #cfe7e3!important;
+    border-radius:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+  }
+  .nav-submenu.menu-open>.level-two{
+    display:block!important;
+  }
+  .nav-dropdown:hover>.level-one,
+  .nav-dropdown:focus-within>.level-one,
+  .nav-submenu:hover>.level-two,
+  .nav-submenu:focus-within>.level-two{
+    display:none!important;
+  }
+  .nav-dropdown.menu-open>.level-one,
+  .nav-submenu.menu-open>.level-two{
+    display:block!important;
+  }
+  .nav-submenu::after{display:none!important}
+  .dropdown-menu a{
+    width:100%!important;
+    padding:9px 11px!important;
+    border-radius:8px!important;
+    font-size:.92rem!important;
+  }
+  .dropdown-children{padding-left:0!important}
+}
