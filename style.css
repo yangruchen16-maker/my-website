@@ -624,3 +624,33 @@ footer{border-top:1px solid var(--line);margin-top:20px}.footer-inner{width:min(
   }
   .dropdown-children{padding-left:0!important}
 }
+
+/* ===== Question-by-question wrong answer analysis ===== */
+.question-analysis-section{margin:10px 0 84px}
+.question-analysis-list{display:grid;gap:14px}
+.qa-card{
+  display:grid;
+  grid-template-columns:62px 1fr;
+  gap:22px;
+  background:#f8fbf9;
+  border:1px solid #d7e9e4;
+  border-radius:20px;
+  padding:24px;
+}
+.qa-number{
+  width:54px;height:54px;
+  display:grid;place-items:center;
+  border:1px solid #b9ddd5;
+  border-radius:50%;
+  color:#4f8f88;
+  font-weight:800;
+  letter-spacing:.05em;
+}
+.qa-card h3{margin:2px 0 12px;color:#356b66;font-size:1.18rem}
+.qa-card p{margin:7px 0;color:#5e7471}
+.qa-card strong{color:#315f5b}
+.qa-card code{background:#e7f2ef;color:#356b66;padding:2px 6px;border-radius:6px}
+@media(max-width:620px){
+  .qa-card{grid-template-columns:1fr;gap:10px}
+  .qa-number{width:44px;height:44px}
+}
