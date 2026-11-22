@@ -480,3 +480,9 @@ footer{border-top:1px solid var(--line);margin-top:20px}.footer-inner{width:min(
   .frame-two{width:48vw;height:48vw;right:-4vw;top:24%}
   .nsdi-side-note{display:none}
 }
+
+/* ===== Dropdown grouping: Natural contains Physics + Chemistry ===== */
+.dropdown-group{border-top:1px solid #e4eeeb;margin-top:4px;padding-top:4px}
+.dropdown-parent-link{font-weight:800!important;color:#356b66!important}
+.dropdown-children{padding-left:14px}
+.dropdown-children a{font-size:.9rem!important;color:#68827f!important;padding-top:7px!important;padding-bottom:7px!important}
