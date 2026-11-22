@@ -77,3 +77,58 @@ footer{border-top:1px solid var(--line);margin-top:20px}.footer-inner{width:min(
 .chapter-grid>a:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.chapter-grid small{font-size:.72rem;letter-spacing:.15em;color:var(--teal);font-weight:800}.chapter-grid h2{color:var(--deep);font-size:1.5rem;margin:52px 0 8px}.chapter-grid p{color:var(--muted);margin:0}
 .compact-hero{padding-bottom:22px}.chapter-page .error-text-card{margin-bottom:80px}.blank-contact{min-height:calc(100vh - 150px)}
 @media(max-width:850px){.chapter-grid,.chemistry-chapters{grid-template-columns:1fr}.nav-dropdown{width:100%}.dropdown-menu{position:static;box-shadow:none;margin-top:5px}.level-two,.level-three{margin-left:14px}.nav-dropdown:hover>.level-one,.nav-dropdown:focus-within>.level-one,.nav-submenu:hover>.dropdown-menu,.nav-submenu:focus-within>.dropdown-menu{display:block}}
+
+/* ===== Stable vertical multi-level menu ===== */
+.nav-dropdown{position:relative}
+.dropdown-menu.level-one{
+  top:100%;
+  left:0;
+  margin-top:0;
+  padding-top:10px;
+}
+.nav-submenu>.dropdown-menu{
+  position:static;
+  margin:4px 0 4px 10px;
+  min-width:0;
+  width:calc(100% - 10px);
+  box-shadow:none;
+  border:0;
+  border-left:2px solid #cfe7e3;
+  border-radius:0 10px 10px 0;
+  background:#f3f9f7;
+  padding:4px 5px 4px 9px;
+}
+.nav-dropdown.menu-open>.level-one,
+.nav-submenu.menu-open>.dropdown-menu{
+  display:block;
+}
+.nav-dropdown:hover>.level-one,
+.nav-submenu:hover>.dropdown-menu{
+  display:block;
+}
+.submenu-trigger span,.nav-trigger span{transition:transform .18s ease}
+.nav-submenu.menu-open>.submenu-trigger span{transform:rotate(90deg)}
+.nav-dropdown.menu-open>.nav-trigger span{transform:rotate(180deg)}
+.dropdown-menu a{color:#4e6868!important}
+.dropdown-menu a:hover{background:#dff0ec!important;color:#244d4b!important}
+
+/* Softer, unified natural-science palette */
+.physics-card,.chemistry-card{
+  background:#dff1ed!important;
+  color:#315f5b!important;
+  border:1px solid #c8e5df;
+  box-shadow:0 12px 30px rgba(70,135,130,.08)!important;
+}
+.physics-card p,.chemistry-card p{color:#587875}
+.physics-card span,.chemistry-card span{color:#3f7772}
+.chapter-grid>a{
+  background:#f4fbf9!important;
+  border-color:#d5ebe6!important;
+  box-shadow:0 10px 24px rgba(70,135,130,.06)!important;
+}
+.chapter-grid>a:hover{border-color:#b9ddd5!important}
+.chapter-grid h2{color:#356b66!important}
+.chapter-grid small{color:#66a9a3!important}
+@media(max-width:850px){
+  .dropdown-menu.level-one{position:static;margin-top:4px;padding-top:4px}
+}
